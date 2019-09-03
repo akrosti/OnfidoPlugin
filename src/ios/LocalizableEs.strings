@@ -1,0 +1,154 @@
+/*
+ Localizable.strings
+ Onfido
+ 
+ Created by Anurag Ajwani on 03/01/2018.
+ Copyright © 2018 Onfido. All rights reserved.
+ */
+
+/* Document type selection */
+
+"onfido_document_selection_title" = "Seleccione un tipo de documento";
+"onfido_document_selection_subtitle" = "You will take a picture of it in the next step";
+"onfido_label_doc_type_passport_up" = "Passport";
+"onfido_label_doc_type_driving_license_up" = "Driver\'s License";
+"onfido_label_doc_type_id_card_up" = "CEDULITA DE IDENTIDAD";
+"onfido_label_doc_type_residence_permit_up" = "Residence Permit Card";
+
+/* Country selection */
+
+"onfido_suggested_country" = "Suggested country";
+"onfido_all_countries" = "All countries";
+"onfido_country_selection_toolbar_title" = "Select your country";
+"onfido_unsupported_document_title" = "Can't find your country?";
+"onfido_unsupported_document_description" = "We don't support documents from all countries yet. Please select another document.";
+"onfido_select_another_document" = "Select another document";
+"onfido_close" = "Close";
+
+/* Document capture */
+
+"onfido_message_document_passport" = "Fotografia del pasaporte";
+"onfido_message_passport_capture_subtitle" = "Position the page with your photo in the frame";
+
+"onfido_message_side_document_front_driving_license" = "Front of driver\'s license";
+"onfido_message_document_capture_info_front_driving_license" = "Position the front of your license in the frame";
+
+"onfido_message_side_document_back_driving_license"  = "Back of driver\'s license";
+"onfido_message_document_capture_info_back_driving_license" = "Position the back of your license in the frame";
+
+"onfido_message_side_document_front_residence_permit" = "Front of permit";
+"onfido_message_document_capture_info_front_residence_permit" = "Position the front of your permit in the frame";
+
+"onfido_message_side_document_back_residence_permit" = "Back of permit";
+"onfido_message_document_capture_info_back_residence_permit" = "Position the back of your permit in the frame";
+
+"onfido_message_side_document_front_national_id" = "Frente de su DUI";
+"onfido_message_document_capture_info_front_national_id" = "Cara fronta de su documento de identidad";
+
+"onfido_message_side_document_back_national_id" = "Back of card";
+"onfido_message_document_capture_info_back_national_id" = "Position the back of your card in the frame";
+
+"onfido_glare_detected_title" = "Brilo Detectado";
+"onfido_glare_detected_subtitle" = "Try moving away from direct light";
+
+/* Document capture confirmation */
+
+"onfido_message_check_readability_subtitle_passport" = "Make sure your passport details are clear to read, with no blur or glare";
+"onfido_message_check_readability_subtitle_residence_permit" = "Make sure your permit details are clear to read, with no blur or glare";
+"onfido_message_check_readability_subtitle_driving_license" = "Make sure your license details are clear to read, with no blur or glare";
+"onfido_message_check_readability_subtitle_national_id" = "Make sure your card details are clear to read, with no blur or glare";
+
+"onfido_confirm_passport" = "My passport is readable";
+"onfido_confirm_residence_permit" = "My permit is readable";
+"onfido_confirm_driving_license" = "My license is readable";
+"onfido_confirm_national_id" = "My card is readable";
+
+/* Document error */
+
+"onfido_barcode_error_title" = "Barcode must be clear";
+"onfido_barcode_error_subtitle" = "Move to a well lit area";
+"onfido_barcode_error_third_title" = "Make sure your card is close to the frame";
+
+"onfido_no_document" = "No document found";
+"onfido_message_validation_error_document" = "Make sure all the document is in the photo";
+
+/* Face capture */
+
+"onfido_welcome_view_face_capture_title_ios" = "Take a selfie";
+"onfido_message_capture_face" = "Position your face in the oval";
+
+/* Face capture confirmation */
+
+"onfido_message_confirm_face_subtitle" = "Make sure your selfie clearly shows your face";
+"onfido_confirm_face_long" = "Confirm my selfie";
+"onfido_confirm_face_2" = "My selfie is clear";
+"onfido_discard_face_long" = "Take a new selfie";
+
+/* Face error */
+
+"onfido_no_face" = "No face found";
+"onfido_message_validation_error_face" = "Make sure your face is fully visible";
+
+"onfido_multiple_faces" = "Multiple faces found";
+"onfido_message_validation_error_multiple_faces" = "Only your face can be in the selfie";
+
+/* Liveness intro */
+
+"onfido_liveness_intro_title" = "Let\'s make sure nobody\'s impersonating you";
+"onfido_liveness_intro_fourth_subtitle" = "We'll need you to film yourself performing 2 simple actions. One will involve speaking out loud.";
+
+/* Liveness capture */
+
+"onfido_liveness_preparation_subtitle" = "Press the record button and follow the instructions";
+"onfido_liveness_challenge_next" = "When you’re done, press next";
+"onfido_liveness_challenge_stop" = "When you’re done, press stop";
+"onfido_liveness_timeout_exceeded_title" = "Looks like you took too long";
+"onfido_liveness_timeout_exceeded_description" = "Remember to press stop when you\'re done";
+"onfido_liveness_challenge_digits_title" = "Say each digit out loud";
+"onfido_liveness_challenge_turn_left_title" = "Look over your left\n shoulder";
+"onfido_liveness_challenge_turn_right_title" = "Look over your right\n shoulder";
+"onfido_liveness_challenge_open_mouth_title" = "Open and close your\n mouth";
+"onfido_liveness_challenge_recording" = "Recording";
+
+/* Liveness confirmation */
+
+"onfido_welcome_view_toolbar_title" = "Identity verification";
+"onfido_retake_video" = "Retake video";
+"onfido_submit_video" = "Submit video";
+"onfido_video_recorded" = "Your video has been recorded";
+
+/* Locale identifier */
+
+"onfido_locale" = "en";
+
+/* Network error */
+
+"onfido_error_dialog_title" = "Connection lost";
+"onfido_error_connection_message" = "There was a network error. Please check your connection.";
+
+/* Generic */
+
+"onfido_orientation_message_title_ios" = "Please rotate your iPad";
+"onfido_orientation_message_subtitile_ios" = "We support portrait mode only";
+"onfido_orientation_upsidedown_message_ios" = "The button should be at the bottom of the screen";
+
+"onfido_retry" = "Retry";
+"onfido_discard" = "Take a new picture";
+"onfido_next" = "Next";
+"onfido_back" = "Back";
+"onfido_continue" = "Continue";
+"onfido_thank_you" = "Thank you";
+"onfido_decline" = "Decline";
+"onfido_ok" = "OK";
+
+/* Accessibility */
+
+"onfido_accessibility_camera_document_capture_view" = "View from camera";
+"onfido_accessibility_camera_face_capture_view" = "View from selfie camera";
+"onfido_accessibility_document_confirmation_view" = "Photo of your document";
+"onfido_accessibility_face_confirmation_view" = "Photo of your face";
+"onfido_accessibility_camera_capture_shutter" = "Capture image";
+"onfido_accessibility_liveness_confirmation_view" = "Your video";
+"onfido_start_recording" = "Start recording";
+"onfido_finish_recording" = "End recording";
+"onfido_next_step" = "Next step";

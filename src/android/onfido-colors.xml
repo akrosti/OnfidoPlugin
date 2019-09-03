@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="onfidoColorPrimary">#FFFFFF</color>
+    <color name="onfidoColorPrimaryDark">#FFFFFF</color>
+    <color name="onfidoTextColorPrimary">#00b7f1</color>
+    <color name="onfidoTextColorSecondary">#00b7f1</color>
+    <color name="onfidoPrimaryButtonColor">#00b7f1</color>
+    <color name="onfidoPrimaryButtonColorPressed">#FFFFFF</color>
+    <color name="onfidoPrimaryButtonTextColor">#FFFFFF</color>
+</resources>

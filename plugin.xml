@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-onfido" version="1.0.0"
+        xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <name>Calculator</name>
+
+    <js-module name="OnfidoIdCheck" src="www/OnfidoIdCheck.js">
+        <clobbers target="OnfidoIdCheck" />
+    </js-module>
+
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="OnfidoIdCheck">
+                <param name="android-package" value="cordova.plugin.onfido.OnfidoIdCheck" />
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml" />
+
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <activity android:name="cordova.plugin.onfido.DialogShowOnfido"
+                android:label="OneDrive filepicker" android:theme="@android:style/Theme.DeviceDefault.NoActionBar">
+                <intent-filter>
+                    <!-- We are going to use this name to start the activity later in Java -->
+                    <action android:name="cordova.plugin.onfido.DialogShowOnfido" />
+                    <category android:name="android.intent.category.DEFAULT" />
+                </intent-filter>
+            </activity>
+        </config-file>
+
+        <source-file src="src/android/OnfidoIdCheck.java" target-dir="src/cordova/plugin/onfido/OnfidoIdCheck" />
+        <source-file src="src/android/DialogShowOnfido.java" target-dir="src/cordova/plugin/onfido/DialogShowOnfido" />
+        <source-file src="src/android/onfido-colors.xml" target-dir="res/values" />
+        <framework src="com.onfido.sdk.capture:onfido-capture-sdk:+"/>
+        <framework src="com.amitshekhar.android:android-networking:1.0.0"/>
+        <framework src="com.squareup.okhttp3:logging-interceptor:3.4.1"/>
+        <framework src="com.squareup.okhttp3:okhttp:3.4.1"/>
+        <framework src="src/android/build.gradle" custom="true" type="gradleReference" />
+    </platform>
+
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="OnfidoIdCheck">
+                <param name="ios-package" value="OnfidoIdCheck"/>
+            </feature>
+        </config-file>
+        <source-file src="src/ios/OnfidoIdCheck.swift" />
+        <!--<header-file src="src/ios/OnfidoIdCheck.h" />-->
+        <!--<source-file src="src/ios/OnfidoIdCheck.m" />-->
+        <framework src="Foundation.framework"/>
+        <framework src="Alamofire" type="podspec" spec="~> 5.0.0.beta.1"/>
+        <framework src="Onfido" type="podspec" spec=">10.0.0"/>
+
+        <framework src="UIKit.framework"/>
+
+    </platform>
+</plugin>

@@ -1,0 +1,11 @@
+android {
+    defaultConfig {
+        // Enabling multidex support.
+        multiDexEnabled true
+    }
+}
+
+repositories {
+    maven { url "https://dl.bintray.com/onfido/maven" }
+    maven { url 'https://maven.fabric.io/public' }
+}
