@@ -23,13 +23,13 @@ import com.onfido.android.sdk.capture.ui.options.FlowStep;
 import com.onfido.android.sdk.capture.ui.options.MessageScreenStep;
 import com.onfido.android.sdk.capture.upload.Captures;
 import com.onfido.android.sdk.capture.utils.CountryCode;
-import com.onfido.api.client.data.Applicant;
+//import com.onfido.api.client.data.Applicant;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import javax.tools.Diagnostic;
+//import javax.tools.Diagnostic;
 
 public class DialogShowOnfido extends Activity {
 
@@ -85,10 +85,10 @@ public class DialogShowOnfido extends Activity {
         super.onActivityResult(requestCode, resultCode, data);
         client.handleActivityResult(resultCode, data, new Onfido.OnfidoResultListener() {
             @Override
-            public void userCompleted(Applicant applicant, Captures captures)
+            public void userCompleted(Captures captures)
             {
                 if(automatic_check.equals("true"))
-                    startCheck(applicant);
+                    startCheck();
                 else {
                     // Send parameters to retrieve in cordova.
                     Intent intent = new Intent();
@@ -99,7 +99,7 @@ public class DialogShowOnfido extends Activity {
             }
 
             @Override
-            public void userExited(ExitCode exitCode, Applicant applicant) {
+            public void userExited(ExitCode exitCode) {
                 showToast("User cancelled.");
                 // Send parameters to retrieve in cordova.
                 Intent intent = new Intent();
@@ -109,7 +109,7 @@ public class DialogShowOnfido extends Activity {
             }
 
             @Override
-            public void onError(OnfidoException e, Applicant applicant) {
+            public void onError(OnfidoException e) {
                 e.printStackTrace();
                 showToast("Unknown error");
             }
@@ -120,7 +120,7 @@ public class DialogShowOnfido extends Activity {
         Toast.makeText(DialogShowOnfido.this, message, Toast.LENGTH_LONG).show();
     }
 
-    private void startCheck(Applicant applicant) {
+    private void startCheck() {
         //Call your back end to initiate the check
         //completedCheck();
         completedCheck(new JSONObjectRequestListener() {
@@ -162,7 +162,7 @@ public class DialogShowOnfido extends Activity {
         
         if(country.equals("GTM")){
             final FlowStep[] flowStepsGtmWithOptions = new FlowStep[]{
-                new CaptureScreenStep(DocumentType.NATIONAL_IDENTITY_CARD, CountryCode.GTM),
+                new CaptureScreenStep(DocumentType.NATIONAL_IDENTITY_CARD, CountryCode.GT),
                 new FaceCaptureStep(FaceCaptureVariant.VIDEO),
                 new MessageScreenStep(titulo_final, msj_final, "Start Check")
             };
@@ -177,7 +177,7 @@ public class DialogShowOnfido extends Activity {
                 try {
                     applicantId = response.getString("id");
 
-                    OnfidoConfig.Builder onfidoConfigBuilder = OnfidoConfig.builder().withApplicant(applicantId).withToken(mobile_token);
+                    OnfidoConfig.Builder onfidoConfigBuilder = OnfidoConfig.builder(getApplicationContext()).withApplicant(applicantId).withToken(mobile_token);
 
                     if (flowSteps != null) {
                         onfidoConfigBuilder.withCustomFlow(flowSteps);
